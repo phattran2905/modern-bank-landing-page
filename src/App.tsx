@@ -4,6 +4,7 @@ import { Navbar } from "./components";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Business from "./components/Business";
+import Billing from "./components/Billing";
 
 function App() {
 	return (
@@ -24,7 +25,7 @@ function App() {
 				<div className={`${styles.boxWidth}`}>
 					<Stats />
 					<Business />
-					<div>3</div>
+					<Billing />
 					<div>Testimonials</div>
 					<div>brands</div>
 					<div>CTA</div>
