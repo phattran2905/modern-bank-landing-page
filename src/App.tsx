@@ -3,6 +3,7 @@ import styles from "./style";
 import { Navbar } from "./components";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
+import Business from "./components/Business";
 
 function App() {
 	return (
@@ -22,7 +23,7 @@ function App() {
 			<div className={`${styles.flexCenter} ${styles.paddingX}`}>
 				<div className={`${styles.boxWidth}`}>
 					<Stats />
-					<div>2</div>
+					<Business />
 					<div>3</div>
 					<div>Testimonials</div>
 					<div>brands</div>
