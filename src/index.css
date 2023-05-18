@@ -4,10 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  
-}
+:root {}
 
 * {
   scroll-behavior: smooth;
+}
+
+.bg-black-gradient {
+  background: linear-gradient(144.39deg,
+      #FFFFFF -278.56%,
+      #6D6D6D -78.47%,
+      #11101D 91.61%);
+}
+
+
+.bg-black-gradient-2 {
+  background: linear-gradient(-168.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%);
 }
