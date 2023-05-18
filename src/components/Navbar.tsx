@@ -4,6 +4,7 @@ import { navLinks } from "../constants";
 
 type Props = {};
 function Navbar({}: Props) {
+	const [active, setActive] = useState("Home");
 	const [toggled, setToggled] = useState(false);
 
 	return (
@@ -18,21 +19,17 @@ function Navbar({}: Props) {
 				{navLinks.map((navLink, index) => (
 					<li
 						key={navLink.id}
-						className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+						className={`font-poppins font-normal cursor-pointer text-[16px] ${
 							index === navLinks.length - 1 ? "mr-0" : "mr-10"
-						}`}
+						} ${active === navLink.title ? "text-white" : "text-dimWhite"}`}
+						onClick={() => setActive(navLink.title)}
 					>
-						<a
-							// className={`text-white`}
-							href={`#${navLink.id}`}
-						>
-							{navLink.title}
-						</a>
+						<a href={`#${navLink.id}`}>{navLink.title}</a>
 					</li>
 				))}
 			</ul>
 
-			<div className="sm:hidden flex flex-1 justify-end">
+			<div className="sm:hidden flex flex-1 justify-end items-center">
 				<button onClick={() => setToggled(!toggled)}>
 					<img
 						src={toggled ? close : menu}
@@ -41,21 +38,21 @@ function Navbar({}: Props) {
 					/>
 				</button>
 
-				<div className={`${toggled ? "flex" : "hidden"} p-6 absolute right-0 top-20 mx-4 my-2 min-w-[140px] rounded-xl bg-black-gradient`}>
+				<div
+					className={`${
+						toggled ? "flex" : "hidden"
+					} p-6 absolute right-0 top-20 mx-4 my-2 min-w-[140px] rounded-xl bg-black-gradient sidebar`}
+				>
 					<ul className="list-none flex flex-col  justify-end items-center flex-1">
 						{navLinks.map((navLink, index) => (
 							<li
 								key={navLink.id}
-								className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${
+								className={`font-poppins font-medium cursor-pointer text-[16px]  ${
 									index === navLinks.length - 1 ? "mb-0" : "mb-4"
-								}`}
+								} ${active === navLink.title ? "text-white" : "text-dimWhite"}`}
+								onClick={() => setActive(navLink.title)}
 							>
-								<a
-									// className={`text-white`}
-									href={`#${navLink.id}`}
-								>
-									{navLink.title}
-								</a>
+								<a href={`#${navLink.id}`}>{navLink.title}</a>
 							</li>
 						))}
 					</ul>
