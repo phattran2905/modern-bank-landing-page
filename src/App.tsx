@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./style";
 import { Navbar } from "./components";
 import Hero from "./components/Hero";
@@ -9,6 +8,7 @@ import CardDeal from "./components/CardDeal";
 import Testimonial from "./components/Testimonial";
 import Clients from "./components/Clients";
 import CTA from "./components/CTA";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -34,7 +34,7 @@ function App() {
           <Testimonial />
 					<Clients />
 					<CTA />
-					<div>Footer</div>
+					<Footer />
 				</div>
 			</div>
 		</div>
