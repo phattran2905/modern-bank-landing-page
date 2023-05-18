@@ -8,6 +8,7 @@ import Billing from "./components/Billing";
 import CardDeal from "./components/CardDeal";
 import Testimonial from "./components/Testimonial";
 import Clients from "./components/Clients";
+import CTA from "./components/CTA";
 
 function App() {
 	return (
@@ -32,7 +33,7 @@ function App() {
           <CardDeal />
           <Testimonial />
 					<Clients />
-					<div>CTA</div>
+					<CTA />
 					<div>Footer</div>
 				</div>
 			</div>
