@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./style";
 import { Navbar } from "./components";
 import Hero from "./components/Hero";
+import Stats from "./components/Stats";
 
 function App() {
 	return (
@@ -20,7 +21,7 @@ function App() {
 
 			<div className={`${styles.flexCenter} ${styles.paddingX}`}>
 				<div className={`${styles.boxWidth}`}>
-					<div>1</div>
+					<Stats />
 					<div>2</div>
 					<div>3</div>
 					<div>Testimonials</div>
