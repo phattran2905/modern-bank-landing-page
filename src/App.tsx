@@ -1,23 +1,24 @@
 import { useState } from "react";
 import styles from "./style";
 import { Navbar } from "./components";
+import Hero from "./components/Hero";
 
 function App() {
 	return (
-		<div className="bg-primary w-full">
-			<div className={`${styles.flexRowCenter} ${styles.paddingX}`}>
+		<div className="bg-primary w-full overflow-hidden">
+			<div className={`${styles.flexCenter} ${styles.paddingX}`}>
 				<div className={`${styles.boxWidth}`}>
 					<Navbar />
 				</div>
 			</div>
 
-			<div className={`${styles.flexRowCenter}`}>
+			<div className={`${styles.flexStart}`}>
 				<div className={`${styles.boxWidth}`}>
-					<div className={`flex`}>Hero</div>
+					<Hero />
 				</div>
 			</div>
 
-			<div className={`${styles.flexRowCenter}`}>
+			<div className={`${styles.flexCenter} ${styles.paddingX}`}>
 				<div className={`${styles.boxWidth}`}>
 					<div>1</div>
 					<div>2</div>
