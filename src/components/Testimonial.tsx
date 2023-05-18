@@ -1,6 +1,5 @@
-import { people01, people02, people03 } from "../assets";
 import { feedback } from "../constants";
-import styles, { layout } from "../style";
+import styles from "../style";
 import FeedbackCard from "./FeedBackCard";
 
 type Props = {};
